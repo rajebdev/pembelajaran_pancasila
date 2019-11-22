@@ -4,6 +4,7 @@ using System.Data;
 using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Linq;
 
 public class EvaluasiController : MonoBehaviour
 {
@@ -18,6 +19,21 @@ public class EvaluasiController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (SceneManager.GetActiveScene().name.Substring(11, 1) == "1")
+        {
+            PlayerPrefs.SetString("Soal", "");
+            int[] quest = new int[5];
+            for (int z = 0; z < 5; z++)
+            {
+                int x = GetRandSoal();
+                while (quest.Contains(x))
+                {
+                    x = GetRandSoal();
+                }
+                quest[z] = x;
+                PlayerPrefs.SetString("Soal", PlayerPrefs.GetString("Soal") + x.ToString());
+            }
+        }
         StartCoroutine(TimeRun());
         generateSoal();
         PlayerPrefs.SetString("Remidi", "");
@@ -39,12 +55,13 @@ public class EvaluasiController : MonoBehaviour
     {
         int idSoal = int.Parse(SceneManager.GetActiveScene().name.Substring(11, 1));
         PlayerPrefs.SetString("Question" + SceneManager.GetActiveScene().name.Substring(11, 1), idSoal.ToString());
-        string conn = "URI=file:" + Application.dataPath + "/StreamingAssets/pancasila.db";
+        //string conn = "URI=file:" + Application.dataPath + "/StreamingAssets/pancasila.db";
+        string conn = PlayerPrefs.GetString("dbku");
         IDbConnection dbconn = new SqliteConnection(conn);
         dbconn.Open();
         IDbCommand dbcmd = dbconn.CreateCommand();
-
-        string sqlQuery = "SELECT * FROM tbl_pancasila_soal WHERE id=" + idSoal.ToString();
+        string soalnow = PlayerPrefs.GetString("Soal").Substring(int.Parse(SceneManager.GetActiveScene().name.Substring(11, 1)) - 1, 1);
+        string sqlQuery = "SELECT * FROM tbl_pancasila_soal WHERE id=" + soalnow.ToString();
         dbcmd.CommandText = sqlQuery;
         IDataReader reader = dbcmd.ExecuteReader();
         while (reader.Read())
@@ -161,7 +178,7 @@ public class EvaluasiController : MonoBehaviour
 
     private int GetRandSoal()
     {
-        int rand = UnityEngine.Random.Range(0, jumlahSoal);
+        int rand = UnityEngine.Random.Range(1, 9);
         return rand;
     }
 
@@ -172,5 +189,11 @@ public class EvaluasiController : MonoBehaviour
             yield return new WaitForSeconds(1f);
             secTime++;
         }
+    }
+
+
+    public void ToMenu()
+    {
+        SceneManager.LoadScene("Begin");
     }
 }

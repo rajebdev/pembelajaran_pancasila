@@ -20,7 +20,8 @@ public class ScoreController : MonoBehaviour
     {
         remidiButton.SetActive(false);
         finishButton.SetActive(false);
-        string conn = "URI=file:" + Application.dataPath + "/StreamingAssets/pancasila.db";
+        //string conn = "URI=file:" + Application.dataPath + "/StreamingAssets/pancasila.db";
+        string conn = PlayerPrefs.GetString("dbku");
         IDbConnection dbconn = new SqliteConnection(conn);
         dbconn.Open();
         IDbCommand dbcmd = dbconn.CreateCommand();

@@ -5550,8 +5550,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 214, y: 92.99998}
-  m_SizeDelta: {x: 1100, y: 300}
+  m_AnchoredPosition: {x: 276, y: 92.99998}
+  m_SizeDelta: {x: 1200, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &768240039
 MonoBehaviour:
@@ -5586,10 +5586,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.3
-  m_Text: Di sekolah Andi memiliki banyak teman dari berbagai suku bangsa. Teman-teman
-    Andi berasal dari suku Jawa, Sunda, Batak, Minang, dan Dayak. Dari banyaknya suku
-    tersebut menjadikan Indonesia bersatu. Simbol pancasila yang tepat untuk kalimat
-    yang digaris bawahi adalah....
+  m_Text: "a. Menghormati hak orang lain denan bersikap tertib saat belajar di kelas.\r\nb.
+    Suka menjahili teman saat pelajaran.\r\nc. Ikut serta dalam kegiatan gotong royong
+    di lingkungan rumah.\r\nd. memanggil dengan sebutan \"HITAM\" pada teman sekelas.\r\nManakah
+    contoh perilaku yang menunjukkan sila ke 5?\r\n"
 --- !u!222 &768240040
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6657,8 +6657,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 216, y: 91}
-  m_SizeDelta: {x: 1100, y: 300}
+  m_AnchoredPosition: {x: 277.99997, y: 91}
+  m_SizeDelta: {x: 1200, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &944855939
 MonoBehaviour:
@@ -6693,10 +6693,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.3
-  m_Text: Di sekolah Andi memiliki banyak teman dari berbagai suku bangsa. Teman-teman
-    Andi berasal dari suku Jawa, Sunda, Batak, Minang, dan Dayak. Dari banyaknya suku
-    tersebut menjadikan Indonesia bersatu. Simbol pancasila yang tepat untuk kalimat
-    yang digaris bawahi adalah....
+  m_Text: "a. Menghormati hak orang lain denan bersikap tertib saat belajar di kelas.\r\nb.
+    Suka menjahili teman saat pelajaran.\r\nc. Ikut serta dalam kegiatan gotong royong
+    di lingkungan rumah.\r\nd. memanggil dengan sebutan \"HITAM\" pada teman sekelas.\r\nManakah
+    contoh perilaku yang menunjukkan sila ke 5?\r\n"
 --- !u!222 &944855940
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7932,6 +7932,141 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1001 &1142656026
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1619007629}
+    m_Modifications:
+    - target: {fileID: 9043050248494626523, guid: 829f311bd0fdec64a81ed5d08f6e4166,
+        type: 3}
+      propertyPath: m_Name
+      value: KembaliBtn
+      objectReference: {fileID: 0}
+    - target: {fileID: 9043050248494626522, guid: 829f311bd0fdec64a81ed5d08f6e4166,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9043050248494626522, guid: 829f311bd0fdec64a81ed5d08f6e4166,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9043050248494626522, guid: 829f311bd0fdec64a81ed5d08f6e4166,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9043050248494626522, guid: 829f311bd0fdec64a81ed5d08f6e4166,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9043050248494626522, guid: 829f311bd0fdec64a81ed5d08f6e4166,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9043050248494626522, guid: 829f311bd0fdec64a81ed5d08f6e4166,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9043050248494626522, guid: 829f311bd0fdec64a81ed5d08f6e4166,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9043050248494626522, guid: 829f311bd0fdec64a81ed5d08f6e4166,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9043050248494626522, guid: 829f311bd0fdec64a81ed5d08f6e4166,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9043050248494626522, guid: 829f311bd0fdec64a81ed5d08f6e4166,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9043050248494626522, guid: 829f311bd0fdec64a81ed5d08f6e4166,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9043050248494626522, guid: 829f311bd0fdec64a81ed5d08f6e4166,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 46
+      objectReference: {fileID: 0}
+    - target: {fileID: 9043050248494626522, guid: 829f311bd0fdec64a81ed5d08f6e4166,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -78
+      objectReference: {fileID: 0}
+    - target: {fileID: 9043050248494626522, guid: 829f311bd0fdec64a81ed5d08f6e4166,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 9043050248494626522, guid: 829f311bd0fdec64a81ed5d08f6e4166,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 9043050248494626522, guid: 829f311bd0fdec64a81ed5d08f6e4166,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9043050248494626522, guid: 829f311bd0fdec64a81ed5d08f6e4166,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9043050248494626522, guid: 829f311bd0fdec64a81ed5d08f6e4166,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9043050248494626522, guid: 829f311bd0fdec64a81ed5d08f6e4166,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9043050248494626522, guid: 829f311bd0fdec64a81ed5d08f6e4166,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9043050248494626522, guid: 829f311bd0fdec64a81ed5d08f6e4166,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9043050248494625061, guid: 829f311bd0fdec64a81ed5d08f6e4166,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 518539192}
+    - target: {fileID: 9043050248494625061, guid: 829f311bd0fdec64a81ed5d08f6e4166,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ToMenu
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 829f311bd0fdec64a81ed5d08f6e4166, type: 3}
+--- !u!224 &1142656027 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 9043050248494626522, guid: 829f311bd0fdec64a81ed5d08f6e4166,
+    type: 3}
+  m_PrefabInstance: {fileID: 1142656026}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1143885550
 GameObject:
   m_ObjectHideFlags: 0
@@ -11616,6 +11751,7 @@ RectTransform:
   - {fileID: 346211567}
   - {fileID: 140823250}
   - {fileID: 887487380}
+  - {fileID: 1142656027}
   m_Father: {fileID: 459268250}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

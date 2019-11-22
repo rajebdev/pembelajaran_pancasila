@@ -62,7 +62,8 @@ public class RemidiController : MonoBehaviour
     {
         int idSoal = int.Parse(PlayerPrefs.GetString("Remidi").Substring(int.Parse(SceneManager.GetActiveScene().name.Substring(8, 1)) - 1, 1));
         PlayerPrefs.SetString("Question" + SceneManager.GetActiveScene().name.Substring(8, 1), idSoal.ToString());
-        string conn = "URI=file:" + Application.dataPath + "/StreamingAssets/pancasila.db";
+        //string conn = "URI=file:" + Application.dataPath + "/StreamingAssets/pancasila.db";
+        string conn = PlayerPrefs.GetString("dbku");
         IDbConnection dbconn = new SqliteConnection(conn);
         dbconn.Open();
         IDbCommand dbcmd = dbconn.CreateCommand();
@@ -213,5 +214,11 @@ public class RemidiController : MonoBehaviour
     {
         PlayerPrefs.SetInt("part1", 0);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+
+    public void ToMenu()
+    {
+        SceneManager.LoadScene("Begin");
     }
 }

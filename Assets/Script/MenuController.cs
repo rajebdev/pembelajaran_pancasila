@@ -1,8 +1,10 @@
 ﻿using Mono.Data.Sqlite;
 using System.Data;
+using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Mono.Data.SqliteClient;
 
 public class MenuController : MonoBehaviour
 {
@@ -23,6 +25,8 @@ public class MenuController : MonoBehaviour
     void Start()
     {
         PlayerPrefs.DeleteAll();
+        SiapinDatabase("pancasila.db");
+        Debug.Log(PlayerPrefs.GetString("dbku"));
         inputNama.SetActive(true);
         menuAwal.SetActive(false);
         menuKD.SetActive(false);
@@ -37,6 +41,44 @@ public class MenuController : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void SiapinDatabase(string p)
+    {
+        Debug.Log("Call to OpenDB:" + p);
+        // check if file exists in Application.persistentDataPath
+        string filepath = Application.persistentDataPath + "/" + p;
+        if (!File.Exists(filepath))
+        {
+            Debug.LogWarning("File \"" + filepath + "\" does not exist. Attempting to create from \"" +
+                             Application.dataPath + "!/assets/" + p);
+            // if it doesn't ->
+            // open StreamingAssets directory and load the db -> 
+            WWW loadDB = new WWW("jar:file://" + Application.dataPath + "!/assets/" + p);
+            while (!loadDB.isDone) { }
+            // then save to Application.persistentDataPath
+            File.WriteAllBytes(filepath, loadDB.bytes);
+        }
+        string connection = "URI=file:" + filepath;
+        Debug.Log("Stablishing connection to: " + connection);
+        PlayerPrefs.SetString("dbku", connection);
+
+        string conn = PlayerPrefs.GetString("dbku");
+        IDbConnection dbconn = new Mono.Data.Sqlite.SqliteConnection(conn);
+        dbconn.Open();
+        IDbCommand dbcmd = dbconn.CreateCommand();
+        string crt_tbl = "DROP TABLE IF EXISTS tbl_pancasila_soal; CREATE TABLE tbl_pancasila_soal(id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, soal varchar(1000) NOT NULL, gambarQ varchar(255) NOT NULL, textA varchar(1000) NOT NULL, textB varchar(1000) NOT NULL, textC varchar(1000) NOT NULL, textD varchar(1000) NOT NULL, gambarA varchar(255) NOT NULL, gambarB varchar(255) NOT NULL, gambarC varchar(255) NOT NULL, gambarD varchar(255) NOT NULL, answer varchar(1) NOT NULL, idMateri INTEGER); DROP TABLE IF EXISTS tbl_user; CREATE TABLE tbl_user(id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, nama TEXT, score INTEGER, waktu INTEGER);";
+        dbcmd.CommandText = crt_tbl;
+        dbcmd.ExecuteNonQuery();
+
+        string query = "INSERT INTO tbl_pancasila_soal(id, soal, gambarQ, textA, textB, textC, textD, gambarA, gambarB, gambarC, gambarD, answer, idMateri) VALUES(1, 'Di sekolah Andi memiliki banyak teman dari berbagai suku bangsa. Teman-teman Andi berasal dari suku Jawa, Sunda, Batak, Minang, dan Dayak. Dari banyaknya suku tersebut menjadikan Indonesia bersatu. Simbol pancasila yang tepat untuk kalimat yang digaris bawahi adalah...', 'q1', '', '', '', '', '2', '3', '1', '5', 'B', 3); INSERT INTO tbl_pancasila_soal(id, soal, gambarQ, textA, textB, textC, textD, gambarA, gambarB, gambarC, gambarD, answer, idMateri) VALUES(2, 'Pada tanggal 17 Agustus selalu diadakan lomba di setiap desa. Lomba yang sering diadakan adalah tarik tambang. Untuk memenangkan setiap kelompok harus saling bekerja sama, bersatu, dan kompak. Sila yang tepat untuk kalimat yang dicetak miring pada pancasila adalah...', 'q2', 'Sila ke-4', 'Sila ke-1', 'Sila ke-3', 'Sila ke-5', '', '', '', '', 'C', 3); INSERT INTO tbl_pancasila_soal(id, soal, gambarQ, textA, textB, textC, textD, gambarA, gambarB, gambarC, gambarD, answer, idMateri) VALUES(3, 'Arti lambang rantai pada simbol sila kedua Pancasila adalah...', '', 'Setiap manusia dengan satu sama lain memiliki kedudukan yang berbeda', 'Setiap manusia membutuhkan satu sama lain dan perlu bersatu', 'Setiap manusia tidak membutuhkan satu sama lain', 'Setiap manusia harus mengenal satu sama lain', '', '', '', '', 'B', 2); INSERT INTO tbl_pancasila_soal(id, soal, gambarQ, textA, textB, textC, textD, gambarA, gambarB, gambarC, gambarD, answer, idMateri) VALUES(4, 'Contoh sikap berikut yang sesuai dengan Pancasila sila kedua adalah...', '', 'Tidak memilih-milih teman', 'Rajin beribadah sesuai ajarannya', 'Memecahkan masalah dengan musyawarah', 'Suka menabung dan tidak menghamburkan uang', '', '', '', '', 'A', 2); INSERT INTO tbl_pancasila_soal(id, soal, gambarQ, textA, textB, textC, textD, gambarA, gambarB, gambarC, gambarD, answer, idMateri) VALUES(5, 'a. Menghormati hak orang lain denan bersikap tertib saat belajar di kelas.\r\nb. Suka menjahili teman saat pelajaran.\r\nc. Ikut serta dalam kegiatan gotong royong di lingkungan rumah.\r\nd. memanggil dengan sebutan �HITAM� pada teman sekelas.\r\nManakah contoh perilaku yang menunjukkan sila ke 5?', '', 'a dan b', 'b dan d', 'c dan d', 'a dan c', '', '', '', '', 'D', 5); INSERT INTO tbl_pancasila_soal(id, soal, gambarQ, textA, textB, textC, textD, gambarA, gambarB, gambarC, gambarD, answer, idMateri) VALUES(6, 'Makna dari sila ke 5 adalah...', '', 'Membeda-bedakan suku dan agama', 'Warga harus diperlakukan secara adil', 'Tidak melakukan gotong royong di lingkungan rumah', 'Mengejek teman yang berbeda dari kita ', '', '', '', '', 'B', 5); INSERT INTO tbl_pancasila_soal(id, soal, gambarQ, textA, textB, textC, textD, gambarA, gambarB, gambarC, gambarD, answer, idMateri) VALUES(7, 'Sila ke 4 pancasila berbunyi...', '', 'Ketuhanan Yang Maha Esa ', 'Kerakyatan yang dipimpin oleh hikmat kebijaksanaan dalam permusyawaratan perwakilan. ', 'Persatuan indonesia ', 'Keadilan sosial bagi seluruh rakyat indonesia ', '', '', '', '', 'B', 4); INSERT INTO tbl_pancasila_soal(id, soal, gambarQ, textA, textB, textC, textD, gambarA, gambarB, gambarC, gambarD, answer, idMateri) VALUES(8, 'Persatuan indonesia adalah bunyi teks pancasila yaitu...', '', 'Sila Kesatu', 'Sila Keempat', 'Sila Kedua', 'Sila Ketiga', '', '', '', '', 'D', 3); INSERT INTO tbl_user (id, nama, score, waktu) VALUES (1, 'Wijanarko', 100, 100); INSERT INTO tbl_user(id, nama, score, waktu) VALUES(2, 'Rajeb', 90, 85); INSERT INTO tbl_user(id, nama, score, waktu) VALUES(3, 'Narko', 10, 100); ";
+        dbcmd.CommandText = query;
+        dbcmd.ExecuteNonQuery();
+        dbcmd.Dispose();
+        dbcmd = null;
+        dbconn.Close();
+        dbconn = null;
+
     }
 
     public void backToMenu()
@@ -263,8 +305,9 @@ public class MenuController : MonoBehaviour
                 GameObject.Destroy(child.gameObject);
         }
 
-        string conn = "URI=file:" + Application.dataPath + "/StreamingAssets/pancasila.db";
-        IDbConnection dbconn = new SqliteConnection(conn);
+        //string conn = "URI=file:" + Application.dataPath + "/StreamingAssets/pancasila.db";
+        string conn = PlayerPrefs.GetString("dbku");
+        IDbConnection dbconn = new Mono.Data.Sqlite.SqliteConnection(conn);
         dbconn.Open();
         IDbCommand dbcmd = dbconn.CreateCommand();
         string sqlQuery = "SELECT * FROM tbl_user ORDER BY score DESC";
@@ -306,7 +349,7 @@ public class MenuController : MonoBehaviour
         {
             PlayerPrefs.SetString("BGM", "OFF");
             onOffText.text = "OFF";
-            bgm.GetComponent<AudioSource>().Stop();
+            bgm.GetComponent<AudioSource>().Pause();
         }
         else
         {

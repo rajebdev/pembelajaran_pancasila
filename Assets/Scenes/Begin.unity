@@ -2943,6 +2943,88 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 212617862}
   m_CullTransparentMesh: 0
+--- !u!1 &215754842
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 215754843}
+  - component: {fileID: 215754845}
+  - component: {fileID: 215754844}
+  m_Layer: 5
+  m_Name: ISI (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &215754843
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 215754842}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1850241892}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -31, y: -223}
+  m_SizeDelta: {x: 1650, y: 500}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &215754844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 215754842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 40
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 4
+    m_MaxSize: 53
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "Pendidikan Guru sekolah dasar\nUniversitas Trunojoyo Madura\n\nKelas 5C\nKelompok
+    3\n\nNama anggota \nErys Rizqi Laily Farichya ( 170611100110)\nMichael Setiawan
+    ( 170611100097)\nReka Kurniawati (170611100114)\nSilviana Agustin ( 170611100117)\nNurul
+    Nadia  F ( 170611100089)\nFitryatush Sholihah (170611100090)"
+--- !u!222 &215754845
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 215754842}
+  m_CullTransparentMesh: 0
 --- !u!1 &221185646
 GameObject:
   m_ObjectHideFlags: 0
@@ -3135,7 +3217,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 230, y: -67}
+  m_AnchoredPosition: {x: 230, y: -11}
   m_SizeDelta: {x: 1650, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &241669118
@@ -3170,7 +3252,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 2
+    m_LineSpacing: 1
   m_Text: "Bacalah materi sebelum mengerjakan soal soal yang tersedia.\nBatas waktu
     mengerjakan soal adalah 1 menit ( jika ada waktu )\nSkor tertinggi adalah 100
     \nJika kurang dari 80 maka akan mengulang kembali"
@@ -13762,6 +13844,88 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1273491639}
   m_CullTransparentMesh: 0
+--- !u!1 &1275878714
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1275878715}
+  - component: {fileID: 1275878717}
+  - component: {fileID: 1275878716}
+  m_Layer: 5
+  m_Name: ISI (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1275878715
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275878714}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1850241892}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -32.999985, y: -221.00002}
+  m_SizeDelta: {x: 1650, y: 500}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1275878716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275878714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.79447633, g: 0.06808472, b: 0.9622642, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 40
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 4
+    m_MaxSize: 53
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "Pendidikan Guru sekolah dasar\nUniversitas Trunojoyo Madura\n\nKelas 5C\nKelompok
+    3\n\nNama anggota \nErys Rizqi Laily Farichya ( 170611100110)\nMichael Setiawan
+    ( 170611100097)\nReka Kurniawati (170611100114)\nSilviana Agustin ( 170611100117)\nNurul
+    Nadia  F ( 170611100089)\nFitryatush Sholihah (170611100090)"
+--- !u!222 &1275878717
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275878714}
+  m_CullTransparentMesh: 0
 --- !u!1 &1277270064
 GameObject:
   m_ObjectHideFlags: 0
@@ -20420,6 +20584,8 @@ RectTransform:
   - {fileID: 1155363840}
   - {fileID: 241669117}
   - {fileID: 2043951402}
+  - {fileID: 215754843}
+  - {fileID: 1275878715}
   m_Father: {fileID: 560457771}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -22409,7 +22575,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 227.99998, y: -65.00001}
+  m_AnchoredPosition: {x: 227.99998, y: -8.999985}
   m_SizeDelta: {x: 1650, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2043951403
@@ -22444,7 +22610,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 2
+    m_LineSpacing: 1
   m_Text: "Bacalah materi sebelum mengerjakan soal soal yang tersedia.\nBatas waktu
     mengerjakan soal adalah 1 menit ( jika ada waktu )\nSkor tertinggi adalah 100
     \nJika kurang dari 80 maka akan mengulang kembali"
