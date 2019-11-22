@@ -1,8 +1,8 @@
 ### Aplikasi Pembelajaran Pancasila menggunakan Unity & SQLite3
 
 #### Tampilan Awal
-![Tampilan Awal](./Docs/1.PNG)
+<img scr="./Docs/1.PNG" alt="Tampilan Awal"/>
 
 
 #### Menu Awal
-![Menu Awal](./Docs/2.PNG)
+<img scr="./Docs/2.PNG" alt="Menu Awal"/>
