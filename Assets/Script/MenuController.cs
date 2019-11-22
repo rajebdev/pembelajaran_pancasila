@@ -4,7 +4,6 @@ using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using Mono.Data.SqliteClient;
 
 public class MenuController : MonoBehaviour
 {
@@ -25,7 +24,8 @@ public class MenuController : MonoBehaviour
     void Start()
     {
         PlayerPrefs.DeleteAll();
-        SiapinDatabase("pancasila.db");
+        //SiapinDatabase("pancasila.db");
+        PlayerPrefs.SetString("dbku", "URI=file:" + Application.dataPath + "/StreamingAssets/pancasila.db");
         Debug.Log(PlayerPrefs.GetString("dbku"));
         inputNama.SetActive(true);
         menuAwal.SetActive(false);
@@ -64,7 +64,7 @@ public class MenuController : MonoBehaviour
         PlayerPrefs.SetString("dbku", connection);
 
         string conn = PlayerPrefs.GetString("dbku");
-        IDbConnection dbconn = new Mono.Data.Sqlite.SqliteConnection(conn);
+        IDbConnection dbconn = new SqliteConnection(conn);
         dbconn.Open();
         IDbCommand dbcmd = dbconn.CreateCommand();
         string crt_tbl = "DROP TABLE IF EXISTS tbl_pancasila_soal; CREATE TABLE tbl_pancasila_soal(id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, soal varchar(1000) NOT NULL, gambarQ varchar(255) NOT NULL, textA varchar(1000) NOT NULL, textB varchar(1000) NOT NULL, textC varchar(1000) NOT NULL, textD varchar(1000) NOT NULL, gambarA varchar(255) NOT NULL, gambarB varchar(255) NOT NULL, gambarC varchar(255) NOT NULL, gambarD varchar(255) NOT NULL, answer varchar(1) NOT NULL, idMateri INTEGER); DROP TABLE IF EXISTS tbl_user; CREATE TABLE tbl_user(id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, nama TEXT, score INTEGER, waktu INTEGER);";
@@ -307,7 +307,7 @@ public class MenuController : MonoBehaviour
 
         //string conn = "URI=file:" + Application.dataPath + "/StreamingAssets/pancasila.db";
         string conn = PlayerPrefs.GetString("dbku");
-        IDbConnection dbconn = new Mono.Data.Sqlite.SqliteConnection(conn);
+        IDbConnection dbconn = new SqliteConnection(conn);
         dbconn.Open();
         IDbCommand dbcmd = dbconn.CreateCommand();
         string sqlQuery = "SELECT * FROM tbl_user ORDER BY score DESC";
