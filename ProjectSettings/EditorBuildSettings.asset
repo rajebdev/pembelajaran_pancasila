@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Begin.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Evaluasi  (1).unity
+    guid: cb9a58269077d514d805100e2daba722
+  - enabled: 1
+    path: Assets/Scenes/Evaluasi  (2).unity
+    guid: 9d6f9818c4c951c4bba622267cbba0fa
+  - enabled: 1
+    path: Assets/Scenes/Evaluasi  (3).unity
+    guid: 93706d2377185134698ab9b5f272ecb8
+  - enabled: 1
+    path: Assets/Scenes/Evaluasi  (4).unity
+    guid: d8fdeb259e358d74c9c444f7f4ed3238
+  - enabled: 1
+    path: Assets/Scenes/Evaluasi  (5).unity
+    guid: fa1986909d5df9446bfe8777c59e8d31
+  - enabled: 1
+    path: Assets/Scenes/Remidi (1).unity
+    guid: ead3f009a0f948b4792e947a272dad2e
+  - enabled: 1
+    path: Assets/Scenes/Remidi (2).unity
+    guid: 132be240c7c56a244b53dc13c1b2b30e
+  - enabled: 1
+    path: Assets/Scenes/Remidi (3).unity
+    guid: 468c8813bf10f0741963e574804734a6
+  - enabled: 1
+    path: Assets/Scenes/Remidi (4).unity
+    guid: c0e4daa56356e6248bc3cbf4447cef84
+  - enabled: 1
+    path: Assets/Scenes/Remidi (5).unity
+    guid: 58cad70c7d49cee48953cf740a8b0338
+  - enabled: 1
+    path: Assets/Scenes/Score.unity
+    guid: 1742b8b89e9633748b111d602d6be37b
+  - enabled: 1
+    path: Assets/Scenes/ScoreAkhir.unity
+    guid: b7ba775a0b567f845ab3ed6310fe5b92
+  m_configObjects: {}
